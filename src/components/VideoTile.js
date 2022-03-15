@@ -3,7 +3,7 @@ import {
   useVideo
 } from "@100mslive/react-sdk";
 
-const VideoTile = ({ peer }) => {
+const Participant = ({ peer }) => {
     // fetch 100ms video stream to particpant view
     const { videoRef } = useVideo({
         trackId: peer.videoTrack
@@ -11,6 +11,9 @@ const VideoTile = ({ peer }) => {
 
   return (
     <div className="w-full h-full rounded-lg overflow-hidden z-40">
+
+         {/* video element to shows particpant stream  */}
+
         <video
           ref={videoRef}
           autoPlay={true}
@@ -22,4 +25,4 @@ const VideoTile = ({ peer }) => {
   );
 };
 
-export default VideoTile;
+export default Participant;

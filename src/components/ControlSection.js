@@ -10,7 +10,7 @@ import { MicrophoneIcon, VideoCameraIcon } from "@heroicons/react/outline";
 export default function ControlSection() {
   const hmsActions = useHMSActions();
 
-  // controls logic
+  // controls logic i.e audio, video and screen sharing
   const {
     isLocalAudioEnabled,
     isLocalVideoEnabled,
@@ -23,6 +23,7 @@ export default function ControlSection() {
   const toggleScreen = async () => {
     await hmsActions.setScreenShareEnabled(!amIScreenSharing);
   };
+
   // end meeting as host or leave as participant
   const endLeaveMeeting = () => {
         hmsActions.endRoom(false, "ended meeting") && hmsActions.leave();
@@ -30,6 +31,9 @@ export default function ControlSection() {
 
   return (
     <div className="h-[4rem] items-center justify-center flex gap-5 w-full">
+
+
+      {/* UI elements controls section  */}
       <button
         className="text-white text-base border border-accent rounded-3xl px-4 py-2"
         onClick={toggleAudio}
@@ -66,6 +70,8 @@ export default function ControlSection() {
       >
         <XIcon className="fill-white h-5 w-5" />
       </button>
+
+
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHMSActions } from "@100mslive/react-sdk";
-import getToken from "../utils/getToken";
+import getAuthToken from "../utils/getToken";
 
 function Lobby() {
   const hmsActions = useHMSActions();
@@ -22,7 +22,7 @@ function Lobby() {
 
 // apply logic to join a meeting
     e.preventDefault();
-    getToken(role).then((token) => {
+    getAuthToken(role).then((token) => {
       hmsActions.join({
         userName: inputValues?.name,
         authToken: token,
