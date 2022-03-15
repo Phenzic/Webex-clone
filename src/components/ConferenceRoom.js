@@ -11,6 +11,8 @@ import {
 import ControlSection from "./ControlSection";
 
 export default function ConferenceRoom() {
+  // access room information from 100ms store
+
   const localPeer = useHMSStore(selectLocalPeer);
 
   const screenshareOn = useHMSStore(selectIsSomeoneScreenSharing);
