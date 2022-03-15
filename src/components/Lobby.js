@@ -19,12 +19,16 @@ function Lobby() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+// apply logic to join a meeting
+    e.preventDefault();
     getToken(role).then((token) => {
       hmsActions.join({
         userName: inputValues?.name,
         authToken: token,
       });
     });
+
   };
 
   return (
