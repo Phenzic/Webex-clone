@@ -26,3 +26,4 @@ const Participant = ({ peer }) => {
 };
 
 export default Participant;
+
