@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHMSActions } from "@100mslive/react-sdk";
-import getAuthToken from "../utils/getAuthToken";
+import getAuthToken from "../util/getAuthToken";
 
 function Lobby() {
   const hmsActions = useHMSActions();
